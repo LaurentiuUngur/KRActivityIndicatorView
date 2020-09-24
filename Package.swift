@@ -1,10 +1,10 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.3
 
 import PackageDescription
 
 let package = Package(
     name: "KRActivityIndicatorView",
-    platforms: [.iOS(.v8)],
+    platforms: [.iOS(.v12)],
     products: [
         .library(
             name: "KRActivityIndicatorView",
@@ -13,11 +13,13 @@ let package = Package(
     targets: [
         .target(
             name: "KRActivityIndicatorView",
-            path: "KRActivityIndicatorView"
+            path: "KRActivityIndicatorView",
+            exclude: ["Info.plist"]
         ),
         .testTarget(
             name: "KRActivityIndicatorViewTests",
-            path: "KRActivityIndicatorViewTests"
+            path: "KRActivityIndicatorViewTests",
+            exclude: ["Info.plist"]
         ),
     ]
 )
